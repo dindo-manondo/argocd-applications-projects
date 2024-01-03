@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: private-repo-ssh
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  type: git
+  url: git@github.com:dindo-manondo/argocd-applications-projects.git
+  sshPrivateKey: |
+    -----BEGIN OPENSSH PRIVATE KEY-----
+    b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAACFwAAAAdzc2gtcn
+    NhAAAAAwEAAQAAAgEAwVwOqQrQ+wPkQDxnqsClVa2F/ocgzVZ9lDhrI4XfP595USvVJdos
+    AWvKckHS6AZrdNyrvuAFovD8fLVfaIglaYt1fZnwZ629fPLTsHg2jXhg10xf45JCMIamM0
+    D/APjq/+0P8aqUAEY5VIe7KHb7qC3CL0rnOvkl9STuTgwVFteouH4HNrk3IOr1+8iRL8W8
+    1P05+zzL9AOAlkq+k233AO89M4xfWt8GL3wY8eRsB8r4lA++feTOo9Eni+MCEh+PQwEcXs
+    nhmii6r4ntlgdHudyVR3WHJxkgeieqiVFaefgTzP0dY2QJrbTGFVxXNXd6Gz5v/3UAzN58
+    RBVUAXAy44VtPm71MaRxW25F2FaNu//y40Tq9K83XH26M3AtuIZ9iTnWcRG3swSg4Osd0W
+    EhlUvTXNr77L2flMYuu52/Mc1kQvGzKdYapHex0F25SxTN7RIlG0Nq3zLymgDmFX69p3zI
+    O5b4Oh2MGuK+yTpTCIyF6mwoKpEWnm//dAovqQQv5Pnb7nwZ856mtZFR7uA8A91PPbvnWD
+    krEDXzpKYnROswT/3TtMhUCMrNlLDZRDorRvcyZnAmOaf/dWc/ydiI3YeIr4EX8/s3vOKn
+    ibYE+BET4mj6CCUEVcTDJoyF6mec37AlLArpdnT/a45Gvqj51zD92rg1Y1mfKrhS2pTGbY
+    MAAAdQF6MikxejIpMAAAAHc3NoLXJzYQAAAgEAwVwOqQrQ+wPkQDxnqsClVa2F/ocgzVZ9
+    lDhrI4XfP595USvVJdosAWvKckHS6AZrdNyrvuAFovD8fLVfaIglaYt1fZnwZ629fPLTsH
+    g2jXhg10xf45JCMIamM0D/APjq/+0P8aqUAEY5VIe7KHb7qC3CL0rnOvkl9STuTgwVFteo
+    uH4HNrk3IOr1+8iRL8W81P05+zzL9AOAlkq+k233AO89M4xfWt8GL3wY8eRsB8r4lA++fe
+    TOo9Eni+MCEh+PQwEcXsnhmii6r4ntlgdHudyVR3WHJxkgeieqiVFaefgTzP0dY2QJrbTG
+    FVxXNXd6Gz5v/3UAzN58RBVUAXAy44VtPm71MaRxW25F2FaNu//y40Tq9K83XH26M3AtuI
+    Z9iTnWcRG3swSg4Osd0WEhlUvTXNr77L2flMYuu52/Mc1kQvGzKdYapHex0F25SxTN7RIl
+    G0Nq3zLymgDmFX69p3zIO5b4Oh2MGuK+yTpTCIyF6mwoKpEWnm//dAovqQQv5Pnb7nwZ85
+    6mtZFR7uA8A91PPbvnWDkrEDXzpKYnROswT/3TtMhUCMrNlLDZRDorRvcyZnAmOaf/dWc/
+    ydiI3YeIr4EX8/s3vOKnibYE+BET4mj6CCUEVcTDJoyF6mec37AlLArpdnT/a45Gvqj51z
+    D92rg1Y1mfKrhS2pTGbYMAAAADAQABAAACAGhX6zlhsuCievwHHNJSX2Za26I8/YCRmfbw
+    czCaP50vy+H3y3A/yduCdZ8u0kePn1FS/ANnFOOXNEl//tqEDdxk+6Qp/EeWxFi3GXFzjc
+    zOF0RX3K8L8FgLcYjbHEFEElzFawM4z+FOBAYPsPnnK2rYNqAaxalXZhpiMY9AiejnvA7D
+    Q9VOIefLo66Zz29+P6aYeD+R0WX+tddkwm8AunhwohA9Qf/hto7NYxC1+W5DI92SmXOKk9
+    BnP/YHLMjm6wJ3iP3F586vB/9OaT269APie1QyohqBPrtsyGSN2EtViinmtYM7KtXoZbSF
+    PjKGJQiqqvmqBCKKNXjwIYMdLvgS7q60C/WnlpD5dQeAQaYmkkf717NSnCQ8EmK1w4F6Ev
+    jwTHHoGQpM6bHKwAoha92qnBMsjfGpJ0wgLPG6YsRThQFp67OKVrP+Uv6U0iy1tyHj94La
+    jNt40DXat6LDVLUeDGkpAdgW207KNV5TEVo2p6S8S0ChDbc5RmSwomrzl15Qu/nCX+hqEr
+    HBm8vofGgt72XHz1P6mloii9pc0CbmolMlLEmVrIUd6NBkLIBHTicElOU6jymQpIGH6wOu
+    KyVNnoRn5chN3zoAW5hOtD6XINrfgixZ8sEYiuQom3lLmKDuLbjyKjNg5oN6D1lrvgbZCa
+    tushwqP9h6c1HOFCeBAAABACbqm+AQxzzhIXslf14hfEjSaw4Dep9V4u2pDYSkZEqasxGe
+    hDOTv0lBclCcaavTyDLT+ITWaxFE1rHWBL8ajLtruGssSOj2sU8mh8IgHi0eVFgSF8uiQa
+    dCidFgAMFFeeS2AMfm5ClNuK/7potfUHiJ/uThxBfmVcRaBxCJ7rr7JsHjpJyGWw7e44it
+    rsEn7bdK3xe7crONrCAVLreBStY6itc10GoWQDBq1YJGnzokoAENozF0HRd0ER11LIPAsI
+    jKiTZK6PEdrP02MlEMfBUhYqQFmCDsjbRrkrnhKzOqND+srdviuuXeSnNRourEfnKSE+2P
+    s9W1EmtyTKlKtUsAAAEBAPpTZHd+TBjR73VwMRcCudHRMAsE3LOlPtSgTcBmxZGUVyrJsS
+    BVGWXyg25X0NvtLh0kASkgsqQhIqQW80kJGyNsjRiOdG4h7qzAKNvrvtiYp0YX81/Px8vQ
+    tSbQvZjQeLVcVI3AIz0e0tpMvfFA6S+wXRYXIw7m9RecNBpnb5id6iKdgItI91e5GxIcxm
+    0KpiTkmYNIypNhtFD5t27Ab8p8jX4posZP/1KAQWPe6A4uS7+PUnI1o7or9+qglV5tJer1
+    dWd/98nTS7ndY6kmj8mIdRmwX0g38ewii1nAdqLDGA1dgWbOiJBrficwWlcLoK+j2vWp9S
+    vCayfV6rlDyKEAAAEBAMW+GQJu77YvHkIh7Ti6+6KKHrflYDi57Af+ndXWCi5eGx4jtYem
+    xS6ZS7h+N8EyuvVXvmyw1hGchSj2OaJZTJMrv8IlQz0hvG4qwp/Hmd+c+b2QZmavL4J/H0
+    ZreMw7u5BpX+y4gi0svqIxJ0ut1G2+nDRoO7JR/9bZQOYwsdOsX1c0n/Tx24A4hi7n7P16
+    Af2QCcFgk/mBdb6Cr5x2kkB/6yd86Rh7zQ21AkAShOl6Fz1mSi8Z+ZsWqb2QBXYFDL8TVd
+    mH4pIh3MVvh/jFPJPQf2ObKstYa5UE3sCix7Mss4ki2aY150/w/5iqdComtoxZuHi+SFGX
+    hxKCUhM0T6MAAAAYZGluZG9tYW5vbmRvNzhAZ21haWwuY29tAQID
+    -----END OPENSSH PRIVATE KEY-----

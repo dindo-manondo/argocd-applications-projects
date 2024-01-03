@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: private-repo-creds-https
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repo-creds # this can be used for all private repos
+stringData:
+  type: git
+  url: https://github.com/dindo-manondo/argocd-sources.git
+  password: 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
+  username: dindo-manondo
