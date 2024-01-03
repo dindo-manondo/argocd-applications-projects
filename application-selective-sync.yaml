@@ -1,17 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook-ssh
+  name: selective-sync
   namespace: argocd
 spec:
   destination:
-    namespace: guestbook-ssh
+    namespace: selective-sync
     server: "https://kubernetes.default.svc"
   project: default
   source:
-    path: guestbook
-    repoURL: "git@github.com:dindo-manondo/argocd-applications-projects.git"
+    path: sync-options/selective-sync
+    repoURL: "https://github.com/dindo-manondo/argocd-sources.git"
     targetRevision: main
+    directory:
+      recurse: true
   syncPolicy:
+    automated: {}
     syncOptions:
       - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
